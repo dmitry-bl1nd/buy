@@ -6,19 +6,63 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Тестовая страница</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'animate.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&amp;display=swap" rel="stylesheet">
+
 </head>
-<body>
-    <header>
+<body style="background: url('{% static 'img/back2.png' %}') no-repeat;background-size: cover">
+    <header class="header">
         <nav>
-            <ul class="menu">
+            <div class="header_logo wow fadeInLeft">BuySellHome</div>
+            <ul class="header_menu wow fadeInRight">
                 <li>
-                    <a href="menu_link">Главная</a>
-                    <a href="menu_link">Купить недвижимость</a>
-                    <a href="menu_link">Арендовать</a>
-                    <a href="menu_link">Продать</a>
+                    <a href="/test" class="header_menu_link">Главная</a>
+                </li>
+                <li>
+                    <a href="#" class="header_menu_link">Купить недвижимость</a>
+                </li>
+                <li>
+                    <a href="#" class="header_menu_link">Арендовать</a>
+                </li>
+                <li>
+                    <a href="#" class="header_menu_link">Продать</a>
                 </li>
             </ul>
         </nav>
     </header>
+
+    <section class="recent_offers wow fadeInUp">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Последние предложения</h1>
+                </div>
+             </div>
+            <div class="row">
+                {% if buildings %}
+                {% for b in buildings %}
+                <div class="col-md-4">
+                    <div class="recent_offers_offer">
+                        <div class="container">
+                            <h1>{{ b.type }}</h1>
+                            <p>{{ b.price }}</p>
+                            <h2>{{ b.img }}</h2>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                {% endif %}
+
+            </div>
+
+        </div>
+
+
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="{% static 'script.js' %}"></script>
 </body>
 </html>
