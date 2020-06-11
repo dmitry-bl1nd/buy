@@ -52,7 +52,8 @@ body
 				width: 100%
 
 .recent_offers
-	max-width: 1320px
+	margin: auto !important
+	max-width: 1320px !important
 	font-weight: 700
 	background: #E08169
 	margin-top: 80px
@@ -61,23 +62,29 @@ body
 	border-radius: 20px
 	color: #BE2C07
 	cursor: pointer
+	&_row
+		.container
+			max-width: 400px !important
 	&_offer
 		background: #1B0F0F
 		height: 184px
 		margin-left: 100px
+		margin-top: 20px !important
+		border-radius: 15px
+		padding: 10px
 //		&_img
-//	//&:after
-//	//	content: ""
-//	//	margin-top: 10px
-//	//	display: block
-//	//	height: 7px
-//	//	width: 0%
-//	//	background: #BE2C07
-//	//	transition: all 0.7s ease-in
-//	//	border-radius: 10px
-//	&:hover:after,
-//	focus:after
-//		//width: 100%
+	&:after
+		content: ""
+		margin-top: 10px
+	//	display: block
+	//	height: 7px
+	//	width: 0%
+	//	background: #BE2C07
+	//	transition: all 0.7s ease-in
+	//	border-radius: 10px
+	&:hover:after,
+	focus:after
+		//width: 100%
 
 
 

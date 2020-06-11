@@ -41,16 +41,17 @@
                     <h1>Последние предложения</h1>
                 </div>
              </div>
-            <div class="row">
+            <div class="row" style="justify-content: space-between">
                 {% if buildings %}
                 {% for b in buildings %}
-                <div class="col-md-4">
-                    <div class="recent_offers_offer">
-                        <div class="container">
-                            <h1>{{ b.type }}</h1>
-                            <p>{{ b.price }}</p>
-                            <h2>{{ b.img }}</h2>
-                        </div>
+                <div class="card" style="width: 370px; height: 184px">
+                        <img class="card-img-top" src="{{ b.img.url }}" style="height: 170px;width: 250px">
+                    <div class="col-md-6">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
                     </div>
                 </div>
                 {% endfor %}

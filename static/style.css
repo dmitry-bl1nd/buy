@@ -14,9 +14,6 @@ body { font-family: "Montserrat", sans-serif; font-weight: 500; height: 100vh; }
 .header_menu_link:after { content: ""; margin-top: 10px; display: block; height: 3px; width: 0%; background: #fff; -webkit-transition: all 0.7s ease-in; transition: all 0.7s ease-in; }
 .header_menu_link:hover:after, .header_menu_link focus:after, .header_menu_link active:after { width: 100%; }
 
-.recent_offers { max-width: 1320px; font-weight: 700; background: #E08169; margin-top: 80px; padding-left: 30px; padding-right: 30px; border-radius: 20px; color: #BE2C07; cursor: pointer; }
-.recent_offers_offer { background: #1B0F0F; height: 184px; margin-left: 100px; }
-e:after { width: 100%; }
-
-.recent_offers { max-width: 1320px; font-weight: 700; background: #E08169; margin-top: 80px; padding-left: 30px; padding-right: 30px; border-radius: 20px; color: #BE2C07; cursor: pointer; }
-.recent_offers_offer { background: #1B0F0F; height: 184px; margin-left: 100px; }
+.recent_offers { margin: auto !important; max-width: 1320px !important; font-weight: 700; background: #E08169; margin-top: 80px; padding-left: 30px; padding-right: 30px; border-radius: 20px; color: #BE2C07; cursor: pointer; }
+.recent_offers_row .container { max-width: 400px !important; }
+.recent_offers_offer { background: #1B0F0F; height: 184px; margin-left: 100px; margin-top: 20px !important; border-radius: 15px; padding: 10px; }
