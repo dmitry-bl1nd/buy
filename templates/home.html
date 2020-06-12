@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+    <section class="recent_offers wow fadeInUp">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Последние предложения</h1>
+                </div>
+             </div>
+            <div class="row wow flash" style="justify-content: space-between">
+                {% if buildings %}
+                {% for b in buildings %}
+                <div class="card wow fadeInDown" style="width: 375px; height: 184px; display: flex; flex-direction: row ">
+                    <img class="card-img-top" src="{{ b.img.url }}" style="height: 170px;width: 250px">
+                    <div class="card-body">
+                    <h5 class="card-title_type">{{ b.type }}</h5>
+                    <h5 class="card-title_area">{{ b.area }} м ²</h5>
+                    <h5 class="card-title_price">{{ b.price }} <i class="fas fa-angle-double-down"></i></h5>
+                    <a href="#" class="card-title_button">Посмотреть</a>
+                    <h5 class="card-title_date text-muted">{{ b.date.date }}</h5>
+                    <h5 class="card-title_loc">{{ b.location }}</h5>
+                    </div>
+                </div>
+                {% endfor %}
+                {% else %}
+                    <h1>Объявления не найдены (=</h1>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

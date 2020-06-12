@@ -3,7 +3,7 @@
 body { font-family: "Montserrat", sans-serif; font-weight: 500; height: 100vh; }
 
 .header { max-width: 1320px; margin: auto; }
-.header li { display: block; }
+.header li { display: block; list-style: none; }
 .header nav { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; margin-top: 50px; }
 .header_logo { cursor: pointer; font-weight: 300; font-size: 24px; font-style: italic; color: #08D900; }
 .header_logo:hover { font-weight: 700; -webkit-transition: all 0.8s; transition: all 0.8s; }
@@ -15,5 +15,11 @@ body { font-family: "Montserrat", sans-serif; font-weight: 500; height: 100vh; }
 .header_menu_link:hover:after, .header_menu_link focus:after, .header_menu_link active:after { width: 100%; }
 
 .recent_offers { margin: auto !important; max-width: 1320px !important; font-weight: 700; background: #E08169; margin-top: 80px; padding-left: 30px; padding-right: 30px; border-radius: 20px; color: #BE2C07; cursor: pointer; }
-.recent_offers_row .container { max-width: 400px !important; }
-.recent_offers_offer { background: #1B0F0F; height: 184px; margin-left: 100px; margin-top: 20px !important; border-radius: 15px; padding: 10px; }
+
+.card { background: #1B0F0F !important; color: #fff; margin-top: 100px !important; border-radius: 15px; padding: 5px; }
+.card-title_type { font-size: 14px; }
+.card-title_area { font-size: 14px; }
+.card-title_price { font-size: 12px; margin-top: 10px; }
+.card-title_date { font-size: 11px; }
+.card-title_loc { font-size: 12px; }
+.card-title_button { font-size: 13px !important; }

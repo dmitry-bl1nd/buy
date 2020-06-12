@@ -3,43 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Тайтл{% endblock %}</title>
+    <title>{% block title %}Главная{% endblock %}</title>
     {% load static %}
     {% load bootstrap4 %}
     {% bootstrap_css %}
     {% bootstrap_javascript jquery='full' %}
+    <link rel="stylesheet" href="{% static 'animate.css' %}">
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&amp;display=swap" rel="stylesheet">
 </head>
 <body style="background: url('{% static 'img/back2.png' %}') no-repeat;background-size: cover">
     {% block header %}
-    <header>
-<nav class="navbar navbar-expand-lg">
-  <a class="navbar-brand" href="">BuySellHome</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link header_link" href="#">Главная <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link header_link" href="#">Купить недвижимость</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link header_link" href="#">Продать</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link header_link" href="#">Арендовать</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-	</header>
+    <header class="header">
+        <nav>
+            <div class="header_logo wow fadeInLeft">BuySellHome</div>
+            <ul class="header_menu wow fadeInRight">
+                <li>
+                    <a href="{% url 'index' %}" class="header_menu_link">Главная</a>
+                </li>
+                <li>
+                    <a href="#" class="header_menu_link">Купить недвижимость</a>
+                </li>
+                <li>
+                    <a href="#" class="header_menu_link">Арендовать</a>
+                </li>
+                <li>
+                    <a href="{% url 'sell' %}" class="header_menu_link">Продать</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 	{% endblock %}
+
     {% block content %}
     {% endblock %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <script src="{% static 'script.js' %}"></script>
 </body>
 </html>
