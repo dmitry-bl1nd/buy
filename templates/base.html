@@ -13,10 +13,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&amp;display=swap" rel="stylesheet">
 </head>
 <body style="background: url('{% static 'img/back2.png' %}') no-repeat;background-size: cover">
+{% bootstrap_messages %}
     {% block header %}
     <header class="header">
         <nav>
-            <div class="header_logo wow fadeInLeft">BuySellHome</div>
+            <a href="/admin"><div class="header_logo wow fadeInLeft">Админ-панель</div></a>
             <ul class="header_menu wow fadeInRight">
                 <li>
                     <a href="{% url 'index' %}" class="header_menu_link">Главная</a>

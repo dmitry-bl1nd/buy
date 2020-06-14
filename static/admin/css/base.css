@@ -6,6 +6,7 @@
 
 body {
     background: url("../../../static/img/back2.png") no-repeat !important;
+    background-size: cover !important;
     margin: 0;
     padding: 0;
     font-size: 14px;
@@ -647,7 +648,7 @@ div.system-message p.system-message-title {
 /* BREADCRUMBS */
 
 div.breadcrumbs {
-    background: #79aec8;
+    background: rgba(2, 196, 102,0.9);
     padding: 10px 40px;
     border: none;
     font-size: 14px;
@@ -835,7 +836,7 @@ table#change-history tbody th {
     justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
-    background: #417690;
+    background: rgba(2, 196, 102, 0.6) !important;
     color: #ffc;
     overflow: hidden;
 }
@@ -900,7 +901,7 @@ table#change-history tbody th {
 /* SIDEBAR */
 
 #content-related {
-    background: #f8f8f8;
+    background: #1b007d;
 }
 
 #content-related .module {
@@ -909,7 +910,7 @@ table#change-history tbody th {
 
 #content-related h3 {
     font-size: 14px;
-    color: #666;
+    color: #fff;
     padding: 0 16px;
     margin: 0 0 16px;
 }
@@ -932,6 +933,10 @@ table#change-history tbody th {
     line-height: 1.2;
     margin-bottom: 10px;
     padding-left: 18px;
+}
+
+#content-related .actionlist li a {
+    rgba(2, 196, 102, 0.6) !important;
 }
 
 #content-related .module h2 {

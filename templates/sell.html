@@ -2,13 +2,14 @@
 {% block content %}
 <div class="container" style="color:green">
     <div class="row">
-        <div class="md-4">
-            <form action="POST">
+{#        <div class="md-4">#}
+            <form method="POST" class="wow fadeInUpBig" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ form }}
-                <input type="submit">
+                {{ form.as_p }}
+                <button class="btn btn-success" type="submit">Сохранить</button>
+                <button class="btn btn-danger" type="reset">Стереть</button>
             </form>
-        </div>
+{#        </div>#}
     </div>
 </div>
 
